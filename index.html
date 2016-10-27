@@ -21,7 +21,7 @@
 
       <div class="messages-container">
         <p ng-repeat="message in messages | filter:inputSrch">
-          {{message.message}}<small class="time-stamp">Submitted: {{message.createdAt | date:'MMM-d, yyyy'}}</small>
+          {{message.message}}<small class="time-stamp">Submitted: {{message.createdAt | date:'MMM-d, yyyy'}} at {{message.createdAt | date:'h:mm'}}</small>
         </p>
       </div>
     </div>
