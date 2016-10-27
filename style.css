@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Lobster');
 html {
   height: 100%;
   width: 100%;
+}
+input{
+  font-family: Indie Flower;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 body {
@@ -8,26 +14,62 @@ body {
   width: 100%;
   font-family: sans-serif;
 }
-
-.main-container {
-  width: 75%;
-  margin: 10px auto;
-  background: rgba(255, 255, 255, 0.86);
-  padding: 5px;
+p{
+  margin-top: 4px;
+  font-weight: bold;
+  font-family: Indie Flower;
+  text-align: center;
+  margin: 3px 0;
+  font-size: 30px;
+  border-bottom: 10px solid #969696;
+  border-left: 5px solid #969696;
+  border-right: 5px solid #969696;
   border-radius: 10px;
 }
-
-.main-container h1 {
+h1 {
+  font-size: 500%;
+  font-family: Lobster;
   text-align: center;
+  color: rgb(27, 142, 247);
+}
+.time-stamp{
+  font-size: small;
+  display: flex;
+  justify-content: flex-end;
+  font-family: inherit;
+}
+.img-bottle{
+  width: 100%;
+  height: 53vh;
+  opacity: .9;
+}
+.img-message-icon{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 45%;
+  top: 42%;
+}
+.main-container {
+  width: 75%;
+  margin: 4% auto 10px auto;;
+  background: rgba(255, 255, 255);
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .text-box {
   margin: 0px auto;
   width: 40%;
 }
+.style-1 input[type="text"] {
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
 
-p{
-  text-align: center;
-  margin: 3px 0;
-  font-size: 17px;
+.style-1 input[type="text"]:focus,
+.style-1 input[type="text"].focus {
+  border: solid 5px #707070;
+  box-shadow: 0 0 5px 1px #969696;
 }

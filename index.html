@@ -6,14 +6,23 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body ng-controller="mainCtrl">
+    <header class="header-wrapper">
+      <img class="img-bottle" src="img/headerBackgroundImg.jpg" alt="background Image" />
+      <img class="img-message-icon" src="img/messageIcon.png" alt="Message Icon" />
+    </header>
     <div class="main-container">
       <h1> DevMountain Chat Room </h1>
       <form ng-submit="postMessage(message)">
-        <input class="form-control text-box" type="text" ng-model="message" placeholder="Message">
+        <input class="form-control text-box focus" type="text" ng-model="message" placeholder="Add Message">
+        <br>
+        <input class="form-control text-box focus" type="text" placeholder="Filter" ng-model='inputSrch'>
+        <br>
       </form>
+
       <div class="messages-container">
-        <p ng-repeat="message in messages ">
-          {{message.message}} </p>
+        <p ng-repeat="message in messages | filter:inputSrch">
+          {{message.message}}<small class="time-stamp">Submitted: {{message.createdAt | date:'MMM-d, yyyy'}}</small>
+        </p>
       </div>
     </div>
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
